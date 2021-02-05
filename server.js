@@ -8,7 +8,7 @@ server.use(express.json());
 server.use("/api/recipes", recipesRouter);
 
 server.get("/", (req, res) => {
-  res.json({ RECIPER_API: "server is running and working" });
+  res.json({ RECIPER_API: "server is running and working.." });
 });
 
 module.exports = server;
