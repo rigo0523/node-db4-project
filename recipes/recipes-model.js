@@ -2,12 +2,17 @@ const db = require("../data/db-config");
 
 module.exports = {
   getRecipes,
+  getRecipesById,
   getShoppingList,
   getInstructions,
 };
 
 function getRecipes() {
   return db("recipes");
+}
+
+function getRecipesById(id) {
+  return db("recipes").where({ id }).first();
 }
 
 function getShoppingList(id) {
